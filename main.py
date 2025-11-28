@@ -6,6 +6,7 @@
 import pandas as pd
 from src import data_processing
 from src import data_analysis
+from src import data_visualization
 
 # 데이터 로딩
 data_file = pd.read_csv("data/student_mental_health.csv")
@@ -33,3 +34,7 @@ print()
 print("[공황발작과 치료 받은 비율의 관계]")
 print(data_analysis.analyze_treatment_by_panic(data_file))
 print()
+
+# 데이터 시각화
+print("[분석 결과 그래프]")
+data_visualization.plot_graphs(data_file)
